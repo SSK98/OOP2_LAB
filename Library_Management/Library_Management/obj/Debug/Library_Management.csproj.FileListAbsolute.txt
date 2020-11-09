@@ -1,0 +1,7 @@
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\obj\Debug\Library_Management.csprojAssemblyReference.cache
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\obj\Debug\Library_Management.csproj.CoreCompileInputs.cache
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\bin\Debug\Library_Management.exe.config
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\bin\Debug\Library_Management.exe
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\bin\Debug\Library_Management.pdb
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\obj\Debug\Library_Management.exe
+C:\Users\ssaki\source\repos\Library_Management\Library_Management\obj\Debug\Library_Management.pdb
