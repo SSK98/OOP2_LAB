@@ -30,6 +30,9 @@ namespace Library_Management
 
         public Account()
         {
+            balance = 0;
+            acId = null;
+            accName = null;
         }
 
         public Account(String accName, String acId, int balance)
@@ -44,16 +47,16 @@ namespace Library_Management
             this.balance += amount;
         }
 
-        public Boolean withdraw(int amount)
+        public void withdraw(int amount)
         {
             if (this.balance < amount)
             {
-                return false;
+                Console.WriteLine("Insufficient Balance.");
             }
             else
             {
                 this.balance -= amount;
-                return true;
+                Console.WriteLine("New Balance = " + balance);
             }
         }
 
@@ -64,11 +67,11 @@ namespace Library_Management
             Console.WriteLine("Account Number: " + acId);
             Console.WriteLine("Balance : " + balance);
         }
-        public Boolean transfer(int amount, Account receiver)
+        public void transfer(int amount, Account receiver)
         {
             if (this.balance < amount)
             {
-                return false;
+                Console.WriteLine("Insufficient Balance.");
             }
             else
             {
@@ -76,11 +79,11 @@ namespace Library_Management
                 {
                     receiver.balance += amount;
                     this.balance -= amount;
-                    return true;
+                    Console.WriteLine("Transfer Completed !!!");
                 }
                 else
                 {
-                    return false;
+                    Console.WriteLine("Receiver Account Does not exist");
                 }
             }
         }

@@ -10,54 +10,77 @@ namespace Library_Management
     class Student
     {
         string name;
+        private float cgpa;
+        private string id;
+        private string department;
+        private int borrowCount;
+        Borrow[] borrows;
+
+        
+
+        public int BorrowCount
+        {
+            get { return borrowCount; }
+            set { borrowCount = value; }
+        }
+
         public string Name
         {
             set { name = value; }
             get { return name; }
         }
-        private string id;
+       
         public string Id
         {
             get { return id; }
             set { id = value; }
         }
-        private float cgpa;
+       
         public float Cgpa
         {
             get { return cgpa; }
             set { cgpa = value; }
         }
-        private string department;
+        
         public string Department
         {
             get { return department; }
             set { department = value; }
         }
 
-        private Borrow[] accounts;
-        private int bookCount;
-        public int BookCount
-        {
-            get { return bookCount; }
-            set { bookCount = value; }
-        }
+    
+      
         public Student()
         {
-            accounts = new Borrow[10];
-            bookCount = 0;
-            Console.WriteLine("Student Default");
+
+            borrows = new Borrow[100];
+
+
         }
 
         public Student(string name, string id, string department, float cgpa)
         {
+            this.id = id;
+            this.name = name;
             this.cgpa = cgpa;
-            Console.WriteLine("Student Valued Constructor");
-            accounts = new Borrow[10];
-            bookCount = 0;
+            this.department = department;
+            borrows = new Borrow[100];
+       
+       
         }
-
-
-
+        public void AddBorrow(Borrow borrow)
+        {
+            borrows[borrowCount++] = borrow;
+        }
+        public void ShowAllBorrows()
+        {
+            ShowInfo();
+            for (int i = 0; i < borrowCount; i++)
+            {
+                
+                borrows[i].ShowInfo();
+            }
+        }
 
 
         public void ShowInfo()
@@ -67,21 +90,7 @@ namespace Library_Management
             Console.WriteLine("Department: " + department);
             Console.WriteLine("CGPA : " + cgpa);
         }
-        public void StudentBorrowedBook(params Borrow[] accounts)
-        {
-            foreach (var acc in accounts)
-            {
-                if (bookCount < 10)
-                {
-                    this.accounts[bookCount++] = acc;
-                    Console.WriteLine("Book has been Addded");
-                }
-                else
-                {
-                    Console.WriteLine("Unable to add Book  " );
-                }
-            }
-        }
+        
 
     }
 }

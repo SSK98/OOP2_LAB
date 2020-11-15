@@ -7,53 +7,42 @@ using System.Threading.Tasks;
 namespace Library_Management
 {
    
-    class Borrow : Book
+    class Borrow 
     {
-        private string bookInfo;
-        public string BookInfo
-        {
-            get { return bookInfo; }
-            set { bookInfo = value; }
-        }
-        private Book[] accounts;
-        private int bookCount;
-        private int BookCount
-        {
-            get { return bookCount; }
-            set { bookCount = value; }
-        }
+        public string Id { get; set; }
+        public int Day { get; set; }
+        public int BookCount { get; set; }
+        public Student Student { get; set; }
+        Book[] books;
+        
         public Borrow()
         {
-            accounts = new Book[10];
-            bookCount = 0;
-            Console.WriteLine("Library Default");
+            books = new Book[5];
         }
-        public Borrow(string bookInfo, string bookName, string bookAuthor, string bookId, string bookType, int bookCopy) : base(bookName, bookAuthor, bookId, bookType, bookCopy)
+        public Borrow(string id,int day,Student student)
         {
-            this.bookInfo = bookInfo;
-            Console.WriteLine("Book Valued Constructor");
-            accounts = new Book[10];
-            bookCount = 0;
+            books = new Book[5];
+            Id = id; 
+            Day = day; 
+            Student = student; 
         }
 
-        public void ShowStudentNameAndBookInfo(params Book[] accounts)
+        public void AddBook(params Book[] books)
         {
-            foreach (var a in accounts)
+            foreach (var a in books)
             {
-                if (bookCount < 10)
+                if (BookCount < 5)
                 {
-                    this.accounts[bookCount++] = a;
-                    Console.WriteLine("Book Borrowed");
+                    this.books[BookCount++] = a;
                 }
-                else
-                {
-                    Console.WriteLine("Cannot Add Book:  " + a.BookCopy);
-                }
+                
             }
         }
-        public void ShowBorrowedBookInfo()
+        public void ShowInfo()
         {
-            Console.WriteLine("Borrowed Book Info: " + bookInfo);
+            Console.WriteLine("ID : " + Id);
+            for (int i = 0; i < BookCount; i++) books[i].ShowInfo();
+            
         }
     }
 }

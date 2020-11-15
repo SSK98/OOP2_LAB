@@ -10,77 +10,28 @@ namespace Library_Management
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Student Information \n \n ");
-            
-            Student s = new Student("Sadman", "01", "CSE", 3);
+            Library l1 = new Library("AIUB", "Kuratoli");
 
-            s.ShowInfo();
-            Console.WriteLine();
-            Console.WriteLine("Account Information \n \n");
-           
-            Account a = new Account();
-            Console.WriteLine();
-            Console.WriteLine();
-            Student s = new Student("Sadman", "0001", "CSE",3);
+            Book b1 = new Book("HP1", "JK Rowling", "1001", "Fiction", 10);
+            Book b2 = new Book("HP2", "JK Rowling", "1002", "Fiction", 10);
+            l1.AddNewBook(b1, b2);
+            Student s1 = new Student("Sadman", "101", "CSE", 3.5f);
+            Borrow br1 = new Borrow("01", 1, s1);
+            Borrow br2 = new Borrow("02", 2, s1);
+         //   l1.ShowAllBooks();
+           var temp= l1.SearchBook("1001");
+            if (temp != null) l1.AddNewBookCopy(temp, 10);
+           // l1.ShowAllBooks();
+            /////////////////////////
+            s1.AddBorrow(br1);
+            br1.AddBook(b1);
+            s1.AddBorrow(br2);
+            //s1.ShowAllBorrows();
+            l1.AddBorrow(br1);
+            l1.AddBorrow(br2);
+            //l1.ShowAllBorrows();
 
-            s.ShowInfo();
-            Console.WriteLine();
-            Console.WriteLine("Account Information");
-            Console.WriteLine();
-            Console.WriteLine();
-             a = new Account("Sadman","1212",11000);
-            a.ShowInfo();
-            a.Transfer(1000, "1212");
-            Console.WriteLine();
-            Console.WriteLine("Book Information");
-            Console.WriteLine();
-            Console.WriteLine();
-            Book b = new Book("HP", "JKR", "001","Ad",3);
-            b.ShowInfo();
-            Library l = new Library("GK", "Dhaka", 1200);
-            Console.WriteLine();
-            Console.WriteLine();
-            l.AddNewBook(b);
-            Console.WriteLine();
-            Console.WriteLine("Added Book Information");
-            l.ShowLibInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            b.ShowAllBooks(l);
-            Console.WriteLine();
-            Console.WriteLine("List of all book information");
-            b.ShowInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            Borrow bor = new Borrow("Borrowed", "HP2", "JKR", "002", "Ad", 100);
-            bor.ShowBorrowedBookInfo();
-            bor.ShowStudentNameAndBookInfo(b);
-            a.ShowInfo();
-            a.Transfer(1000, "1212");
-            Console.WriteLine();
-            Console.WriteLine("Book Information");
-            Console.WriteLine();
-            Console.WriteLine();
-            Book b = new Book("HP", "JKR", "001", "Ad", 3);
-            b.ShowInfo();
-            Library l = new Library("GK", "Dhaka", 1200);
-            Console.WriteLine();
-            Console.WriteLine();
-            l.AddNewBook(b);
-            Console.WriteLine();
-            Console.WriteLine("Added Book Information");
-            l.ShowLibInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            b.ShowAllBooks(l);
-            Console.WriteLine();
-            Console.WriteLine("List of all book information");
-            b.ShowInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            Borrow bor = new Borrow("Borrowed", "HP2", "JKR", "002", "Ad", 100);
-            bor.ShowBorrowedBookInfo();
-            bor.ShowStudentNameAndBookInfo(b);
+
         }
     }
 }

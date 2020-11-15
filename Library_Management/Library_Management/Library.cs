@@ -9,55 +9,60 @@ namespace Library_Management
     class Library
     {
         string libName;
+        private int totalBook;
+        private int borrowCount;
+        private string libAddress;
+        private Book[] listOfBook;
+        Borrow[] borrows;
+
         public string LibName
         {
             set { libName = value; }
             get { return libName; }
         }
-        private string libAddress;
+      
         public string LibAddress
         {
             get { return libAddress; }
             set { libAddress = value; }
         }
 
-        private int totalBook;
-
+       
+        
         public int TotalBook
         {
             get { return totalBook; }
             set { totalBook = value; }
         }
-        private Book[] accounts;
-        private int bookCount;
-        public int BookCount
+        public int BorrowCount
         {
-            get { return bookCount; }
-            set { bookCount = value; }
+            get { return BorrowCount; }
+            set { BorrowCount = value; }
         }
 
         public Library()
         {
-            accounts = new Book[10];
-            bookCount = 0;
-            Console.WriteLine("Library Default");
+            totalBook = 0;
+            listOfBook = new Book[100];
+            borrows = new Borrow[100];
+            borrowCount = 0;
         }
-        public Library(string libName, string libAddress, int totalBook)
+        public Library(string libName, string libAddress)
         {
             this.libName = libName;
             this.libAddress = libAddress;
-            this.totalBook = totalBook;
-            Console.WriteLine("Book Valued Constructor");
-            accounts = new Book[10];
-            bookCount = 0;
+            listOfBook = new Book[100];
+            totalBook = 0;
+            borrowCount = 0;
+            borrows = new Borrow[100];
         }
-        public void AddNewBook(params Book[] accounts)
+        public void AddNewBook(params Book[] books)
         {
-            foreach (var a in accounts)
+            foreach (var a in books)
             {
-                if (bookCount < 10)
+                if (totalBook < 100)
                 {
-                    this.accounts[bookCount++] = a;
+                    this.listOfBook[totalBook++] = a;
                     Console.WriteLine("Book Added");
                 }
                 else
@@ -66,20 +71,59 @@ namespace Library_Management
                 }
             }
         }
-        public void DeleteBook(int bid)
+        public void DeleteBook(string bid)
         {
-            if (bid == totalBook)
+           for(int i = 0;i < totalBook;i++)
             {
-                totalBook -= bid;
+                if (listOfBook[i].BookId == bid)
+                {
+                    listOfBook[i] = null;
+                    break;
+                }
             }
-            else
-                Console.WriteLine("The Book is not available in Library");
+        }
+        public void AddNewBookCopy(Book book, int copy)
+        {
+            book.AddBookCopy(copy);
+
+        }
+        public Book SearchBook(string id)
+        {
+            foreach (var a in listOfBook)
+            {
+                if (a.BookId == id) return a;
+            }
+            return null;
+        }
+        public void ShowAllBooks()
+        {
+            for(int i = 0; i < totalBook;i++)
+            {
+                listOfBook[i].ShowInfo();
+                Console.WriteLine();
+            }
+        }
+        public void AddBorrow( Borrow borrow)
+        {
+            borrows[borrowCount++] = borrow;
         }
         public void ShowLibInfo()
         {
             Console.WriteLine("Library Name: " + libName);
             Console.WriteLine("Library Address: " + libAddress);
             Console.WriteLine("Total Books: " + totalBook);
+            Console.WriteLine();
         }
+        public void ShowAllBorrows()
+        {
+            for (int i = 0; i < BorrowCount; i++)
+            {
+                Console.WriteLine("**********STUDENT INFO***********");
+                borrows[i].Student.ShowInfo();
+                Console.WriteLine("**********Borrow INFO***********");
+                borrows[i].ShowInfo();
+            }
+        }
+
     }
 }
