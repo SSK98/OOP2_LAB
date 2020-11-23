@@ -23,7 +23,7 @@ namespace FinalLab_1
     {
             if(MinimalTrans > TransCount)
             {
-                if (Balance - amount < MinimumBalance)
+                if (Balance - amount > MinimumBalance)
                 {
                     Balance += amount;
                 }
