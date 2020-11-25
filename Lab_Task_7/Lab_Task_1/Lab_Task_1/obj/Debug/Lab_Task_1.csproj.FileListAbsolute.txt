@@ -1,0 +1,6 @@
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\bin\Debug\Lab_Task_1.exe.config
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\bin\Debug\Lab_Task_1.exe
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\bin\Debug\Lab_Task_1.pdb
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\obj\Debug\Lab_Task_1.csproj.CoreCompileInputs.cache
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\obj\Debug\Lab_Task_1.exe
+D:\College\C#\VS\Lab_Task_1\Lab_Task_1\obj\Debug\Lab_Task_1.pdb
