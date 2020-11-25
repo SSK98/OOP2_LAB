@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_Task_7
 {
-    class ScientificCalculator : IBasicCalculator
+    class ScientificCalculator : IBasicCalculator , IScientificCalculator
     {
         public string Name { get; set; }
         public string Model { get; set; }
