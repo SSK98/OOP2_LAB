@@ -1,0 +1,7 @@
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\bin\Debug\Faculty_Departmennt.exe.config
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\bin\Debug\Faculty_Departmennt.exe
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\bin\Debug\Faculty_Departmennt.pdb
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\obj\Debug\Faculty_Departmennt.csprojAssemblyReference.cache
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\obj\Debug\Faculty_Departmennt.csproj.CoreCompileInputs.cache
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\obj\Debug\Faculty_Departmennt.exe
+D:\College\C#\VS\Faculty_Departmennt\Faculty_Departmennt\obj\Debug\Faculty_Departmennt.pdb
