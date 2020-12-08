@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Lab_Performance
 {
-    public partial class Information : Form
+    public partial class Dashboard : Form
     {
-        public Information()
+        public Dashboard()
         {
             InitializeComponent();
         }
 
-        private void Information_Load(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClickedAddUser(object sender, EventArgs e)
+        {
+            new Information().Show();
         }
     }
 }

@@ -34,23 +34,45 @@ namespace Lab_Performance
 
         private void Clicked(object sender, EventArgs e)
         {
-            string name = textBoxUserName.Text;
-            string password = textBoxPassword.Text;
+            string name = "";
+            string password = "";
             string errorMsg = "";
             bool error = false;
-            if (name.Equals(""))
+            if (textBoxUserName.Text.Equals(""))
             {
-                MessageBox.Show("User Name Required\n");
-            }
-            else if(!name.Equals("18-37370-1"))
-            {
-                MessageBox.Show("Invalid Name\n");
+                errorMsg = "Name Required";
                 error = true;
             }
-            else 
+            else
             {
-                
+                name = textBoxUserName.Text;
+            }
+            if (textBoxPassword.Text.Equals(""))
+            {
+                errorMsg += "\nPassword Required";
+                error = true;
+            }
+            else
+            {
+                password = textBoxPassword.Text;
+            }
+           
+            if (!error)
+            {
+                if (name.Equals("18-37370-1") && password.Equals("Sadman")) //Name = 18-37370-1 password  =Sadman
+                {
+                    new Dashboard().Show();
+                } 
+                else
+                {
+                    MessageBox.Show("Invalid Name or Password");
+                }
+            }
+            else
+            {
+                MessageBox.Show(errorMsg);
             }
         }
+        
     }
 }

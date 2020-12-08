@@ -35,7 +35,6 @@ namespace Lab_Performance
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,19 +100,11 @@ namespace Lab_Performance
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.Clicked);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(733, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 233);
-            this.panel2.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 508);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -131,7 +122,6 @@ namespace Lab_Performance
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Panel panel2;
     }
 }
 

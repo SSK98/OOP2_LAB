@@ -8,3 +8,5 @@ D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.cspro
 D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.csproj.CoreCompileInputs.cache
 D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.exe
 D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.pdb
+D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.Information.resources
+D:\College\C#\VS\Lab_Performance\Lab_Performance\obj\Debug\Lab_Performance.Dashboard.resources
