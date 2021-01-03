@@ -1,0 +1,11 @@
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.csprojAssemblyReference.cache
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.Properties.Resources.resources
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.csproj.GenerateResource.cache
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.csproj.CoreCompileInputs.cache
+D:\College\C#\Assignment_Quize\Assignment_Quize\bin\Debug\Assignment_Quize.exe.config
+D:\College\C#\Assignment_Quize\Assignment_Quize\bin\Debug\Assignment_Quize.exe
+D:\College\C#\Assignment_Quize\Assignment_Quize\bin\Debug\Assignment_Quize.pdb
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.exe
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.pdb
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.allbooks.resources
+D:\College\C#\Assignment_Quize\Assignment_Quize\obj\Debug\Assignment_Quize.BookDetails.resources
